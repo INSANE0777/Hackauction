@@ -1,0 +1,283 @@
+<svg viewBox="0 0 900 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles -->
+  <defs>
+    <style type="text/css">
+      .folder { fill: #FFD700; stroke: #D4AF37; stroke-width: 1; }
+      .file { fill: #A0D6F1; stroke: #5AACDE; stroke-width: 1; }
+      .text { font-family: monospace; font-size: 12px; }
+      .line { stroke: #888; stroke-width: 1; }
+      .root { font-weight: bold; font-size: 14px; }
+      .vue { fill: #41B883; stroke: #35495E; stroke-width: 1; }
+      .js { fill: #F7DF1E; stroke: #C9B61A; stroke-width: 1; }
+      .ts { fill: #3178C6; stroke: #264D7C; stroke-width: 1; }
+      .json { fill: #F5DE19; stroke: #C9B61A; stroke-width: 1; }
+      .html { fill: #E44D26; stroke: #B33B1E; stroke-width: 1; }
+      .css { fill: #264DE4; stroke: #1A3AA8; stroke-width: 1; }
+      .sql { fill: #E38C00; stroke: #AB6C00; stroke-width: 1; }
+      .dotfile { fill: #CCCCCC; stroke: #999999; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="900" height="800" fill="#F8F8F8" />
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="text root">insane0777-hackaution-mono-repo</text>
+  
+  <!-- Tree structure -->
+  <g transform="translate(50, 50)">
+    <!-- Root folder -->
+    <rect x="0" y="0" width="16" height="16" class="folder" rx="2" />
+    <text x="22" y="13" class="text root">insane0777-hackaution-mono-repo</text>
+    <line x1="8" y1="16" x2="8" y2="740" class="line" />
+    
+    <!-- README.MD -->
+    <line x1="8" y1="35" x2="30" y2="35" class="line" />
+    <rect x="30" y="27" width="16" height="16" class="file" rx="2" />
+    <text x="52" y="40" class="text">README.MD</text>
+    
+    <!-- backend folder -->
+    <line x1="8" y1="60" x2="30" y2="60" class="line" />
+    <rect x="30" y="52" width="16" height="16" class="folder" rx="2" />
+    <text x="52" y="65" class="text">backend/</text>
+    <line x1="38" y1="68" x2="38" y2="220" class="line" />
+    
+    <!-- backend files -->
+    <line x1="38" y1="85" x2="60" y2="85" class="line" />
+    <rect x="60" y="77" width="16" height="16" class="json" rx="2" />
+    <text x="82" y="90" class="text">package-lock.json</text>
+    
+    <line x1="38" y1="105" x2="60" y2="105" class="line" />
+    <rect x="60" y="97" width="16" height="16" class="json" rx="2" />
+    <text x="82" y="110" class="text">package.json</text>
+    
+    <line x1="38" y1="125" x2="60" y2="125" class="line" />
+    <rect x="60" y="117" width="16" height="16" class="js" rx="2" />
+    <text x="82" y="130" class="text">server.js</text>
+    
+    <line x1="38" y1="145" x2="60" y2="145" class="line" />
+    <rect x="60" y="137" width="16" height="16" class="json" rx="2" />
+    <text x="82" y="150" class="text">vercel.json</text>
+    
+    <!-- agent folder in backend -->
+    <line x1="38" y1="165" x2="60" y2="165" class="line" />
+    <rect x="60" y="157" width="16" height="16" class="folder" rx="2" />
+    <text x="82" y="170" class="text">agent/</text>
+    <line x1="68" y1="173" x2="68" y2="217" class="line" />
+    
+    <line x1="68" y1="185" x2="90" y2="185" class="line" />
+    <rect x="90" y="177" width="16" height="16" class="js" rx="2" />
+    <text x="112" y="190" class="text">api.js</text>
+    
+    <line x1="68" y1="200" x2="90" y2="200" class="line" />
+    <rect x="90" y="192" width="16" height="16" class="js" rx="2" />
+    <text x="112" y="205" class="text">test2.js</text>
+    
+    <line x1="68" y1="215" x2="90" y2="215" class="line" />
+    <rect x="90" y="207" width="16" height="16" class="js" rx="2" />
+    <text x="112" y="220" class="text">whole.js</text>
+    
+    <!-- migrations folder in backend -->
+    <line x1="38" y1="240" x2="60" y2="240" class="line" />
+    <rect x="60" y="232" width="16" height="16" class="folder" rx="2" />
+    <text x="82" y="245" class="text">migrations/</text>
+    <line x1="68" y1="248" x2="68" y2="265" class="line" />
+    
+    <line x1="68" y1="265" x2="90" y2="265" class="line" />
+    <rect x="90" y="257" width="16" height="16" class="sql" rx="2" />
+    <text x="112" y="270" class="text">001_create_users.sql</text>
+    
+    <!-- project folder -->
+    <line x1="8" y1="290" x2="30" y2="290" class="line" />
+    <rect x="30" y="282" width="16" height="16" class="folder" rx="2" />
+    <text x="52" y="295" class="text">project/</text>
+    <line x1="38" y1="298" x2="38" y2="740" class="line" />
+    
+    <!-- project files -->
+    <line x1="38" y1="310" x2="60" y2="310" class="line" />
+    <rect x="60" y="302" width="16" height="16" class="file" rx="2" />
+    <text x="82" y="315" class="text">README.md</text>
+    
+    <line x1="38" y1="325" x2="60" y2="325" class="line" />
+    <rect x="60" y="317" width="16" height="16" class="html" rx="2" />
+    <text x="82" y="330" class="text">index.html</text>
+    
+    <line x1="38" y1="340" x2="60" y2="340" class="line" />
+    <rect x="60" y="332" width="16" height="16" class="json" rx="2" />
+    <text x="82" y="345" class="text">package-lock.json</text>
+    
+    <line x1="38" y1="355" x2="60" y2="355" class="line" />
+    <rect x="60" y="347" width="16" height="16" class="json" rx="2" />
+    <text x="82" y="360" class="text">package.json</text>
+    
+    <line x1="38" y1="370" x2="60" y2="370" class="line" />
+    <rect x="60" y="362" width="16" height="16" class="json" rx="2" />
+    <text x="82" y="375" class="text">tsconfig.app.json</text>
+    
+    <line x1="38" y1="385" x2="60" y2="385" class="line" />
+    <rect x="60" y="377" width="16" height="16" class="json" rx="2" />
+    <text x="82" y="390" class="text">tsconfig.json</text>
+    
+    <line x1="38" y1="400" x2="60" y2="400" class="line" />
+    <rect x="60" y="392" width="16" height="16" class="json" rx="2" />
+    <text x="82" y="405" class="text">tsconfig.node.json</text>
+    
+    <line x1="38" y1="415" x2="60" y2="415" class="line" />
+    <rect x="60" y="407" width="16" height="16" class="ts" rx="2" />
+    <text x="82" y="420" class="text">vite.config.ts</text>
+    
+    <line x1="38" y1="430" x2="60" y2="430" class="line" />
+    <rect x="60" y="422" width="16" height="16" class="dotfile" rx="2" />
+    <text x="82" y="435" class="text">.gitignore</text>
+    
+    <!-- agent folder in project -->
+    <line x1="38" y1="445" x2="60" y2="445" class="line" />
+    <rect x="60" y="437" width="16" height="16" class="folder" rx="2" />
+    <text x="82" y="450" class="text">agent/</text>
+    <line x1="68" y1="453" x2="68" y2="480" class="line" />
+    
+    <line x1="68" y1="465" x2="90" y2="465" class="line" />
+    <rect x="90" y="457" width="16" height="16" class="js" rx="2" />
+    <text x="112" y="470" class="text">test2.js</text>
+    
+    <line x1="68" y1="480" x2="90" y2="480" class="line" />
+    <rect x="90" y="472" width="16" height="16" class="js" rx="2" />
+    <text x="112" y="485" class="text">whole.js</text>
+    
+    <!-- public folder -->
+    <line x1="38" y1="495" x2="60" y2="495" class="line" />
+    <rect x="60" y="487" width="16" height="16" class="folder" rx="2" />
+    <text x="82" y="500" class="text">public/</text>
+    
+    <!-- src folder -->
+    <line x1="38" y1="510" x2="60" y2="510" class="line" />
+    <rect x="60" y="502" width="16" height="16" class="folder" rx="2" />
+    <text x="82" y="515" class="text">src/</text>
+    <line x1="68" y1="518" x2="68" y2="670" class="line" />
+    
+    <!-- src files -->
+    <line x1="68" y1="525" x2="90" y2="525" class="line" />
+    <rect x="90" y="517" width="16" height="16" class="vue" rx="2" />
+    <text x="112" y="530" class="text">App.vue</text>
+    
+    <line x1="68" y1="540" x2="90" y2="540" class="line" />
+    <rect x="90" y="532" width="16" height="16" class="vue" rx="2" />
+    <text x="112" y="545" class="text">AppWrapper.vue</text>
+    
+    <line x1="68" y1="555" x2="90" y2="555" class="line" />
+    <rect x="90" y="547" width="16" height="16" class="ts" rx="2" />
+    <text x="112" y="560" class="text">main.ts</text>
+    
+    <line x1="68" y1="570" x2="90" y2="570" class="line" />
+    <rect x="90" y="562" width="16" height="16" class="ts" rx="2" />
+    <text x="112" y="575" class="text">router.ts</text>
+    
+    <line x1="68" y1="585" x2="90" y2="585" class="line" />
+    <rect x="90" y="577" width="16" height="16" class="css" rx="2" />
+    <text x="112" y="590" class="text">style.css</text>
+    
+    <line x1="68" y1="600" x2="90" y2="600" class="line" />
+    <rect x="90" y="592" width="16" height="16" class="ts" rx="2" />
+    <text x="112" y="605" class="text">vite-env.d.ts</text>
+    
+    <!-- assets folder -->
+    <line x1="68" y1="615" x2="90" y2="615" class="line" />
+    <rect x="90" y="607" width="16" height="16" class="folder" rx="2" />
+    <text x="112" y="620" class="text">assets/</text>
+    
+    <!-- components folder -->
+    <line x1="68" y1="630" x2="90" y2="630" class="line" />
+    <rect x="90" y="622" width="16" height="16" class="folder" rx="2" />
+    <text x="112" y="635" class="text">components/</text>
+    <line x1="98" y1="638" x2="98" y2="740" class="line" />
+    
+    <!-- Vue components -->
+    <line x1="98" y1="645" x2="120" y2="645" class="line" />
+    <rect x="120" y="637" width="16" height="16" class="vue" rx="2" />
+    <text x="142" y="650" class="text">Auth.vue</text>
+    
+    <line x1="98" y1="660" x2="120" y2="660" class="line" />
+    <rect x="120" y="652" width="16" height="16" class="vue" rx="2" />
+    <text x="142" y="665" class="text">Cta.vue</text>
+    
+    <line x1="98" y1="675" x2="120" y2="675" class="line" />
+    <rect x="120" y="667" width="16" height="16" class="vue" rx="2" />
+    <text x="142" y="680" class="text">Demo.vue</text>
+    
+    <line x1="98" y1="690" x2="120" y2="690" class="line" />
+    <rect x="120" y="682" width="16" height="16" class="vue" rx="2" />
+    <text x="142" y="695" class="text">FeatureCard.vue</text>
+    
+    <line x1="98" y1="705" x2="120" y2="705" class="line" />
+    <rect x="120" y="697" width="16" height="16" class="vue" rx="2" />
+    <text x="142" y="710" class="text">Features.vue</text>
+    
+    <!-- Additional components abbreviated with ellipsis -->
+    <line x1="98" y1="720" x2="120" y2="720" class="line" />
+    <text x="142" y="725" class="text">... (Footer, Header, Hero, etc.)</text>
+    
+    <!-- composables folder -->
+    <line x1="68" y1="655" x2="90" y2="655" class="line" />
+    <rect x="90" y="647" width="16" height="16" class="folder" rx="2" />
+    <text x="112" y="660" class="text">composables/</text>
+    <line x1="98" y1="663" x2="98" y2="675" class="line" />
+    
+    <line x1="98" y1="675" x2="120" y2="675" class="line" />
+    <rect x="120" y="667" width="16" height="16" class="ts" rx="2" />
+    <text x="142" y="680" class="text">useScroll.ts</text>
+    
+    <!-- bolt folder -->
+    <line x1="38" y1="685" x2="60" y2="685" class="line" />
+    <rect x="60" y="677" width="16" height="16" class="folder dotfile" rx="2" />
+    <text x="82" y="690" class="text">.bolt/</text>
+    <line x1="68" y1="693" x2="68" y2="705" class="line" />
+    
+    <line x1="68" y1="705" x2="90" y2="705" class="line" />
+    <rect x="90" y="697" width="16" height="16" class="json" rx="2" />
+    <text x="112" y="710" class="text">config.json</text>
+    
+    <!-- vscode folder -->
+    <line x1="38" y1="720" x2="60" y2="720" class="line" />
+    <rect x="60" y="712" width="16" height="16" class="folder dotfile" rx="2" />
+    <text x="82" y="725" class="text">.vscode/</text>
+    <line x1="68" y1="728" x2="68" y2="740" class="line" />
+    
+    <line x1="68" y1="740" x2="90" y2="740" class="line" />
+    <rect x="90" y="732" width="16" height="16" class="json" rx="2" />
+    <text x="112" y="745" class="text">extensions.json</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(700, 50)">
+    <text x="0" y="0" class="text" font-weight="bold">Legend:</text>
+    <rect x="0" y="10" width="16" height="16" class="folder" rx="2" />
+    <text x="22" y="23" class="text">Folder</text>
+    
+    <rect x="0" y="35" width="16" height="16" class="file" rx="2" />
+    <text x="22" y="48" class="text">File</text>
+    
+    <rect x="0" y="60" width="16" height="16" class="vue" rx="2" />
+    <text x="22" y="73" class="text">Vue</text>
+    
+    <rect x="0" y="85" width="16" height="16" class="js" rx="2" />
+    <text x="22" y="98" class="text">JavaScript</text>
+    
+    <rect x="0" y="110" width="16" height="16" class="ts" rx="2" />
+    <text x="22" y="123" class="text">TypeScript</text>
+    
+    <rect x="0" y="135" width="16" height="16" class="json" rx="2" />
+    <text x="22" y="148" class="text">JSON</text>
+    
+    <rect x="0" y="160" width="16" height="16" class="html" rx="2" />
+    <text x="22" y="173" class="text">HTML</text>
+    
+    <rect x="0" y="185" width="16" height="16" class="css" rx="2" />
+    <text x="22" y="198" class="text">CSS</text>
+    
+    <rect x="0" y="210" width="16" height="16" class="sql" rx="2" />
+    <text x="22" y="223" class="text">SQL</text>
+    
+    <rect x="0" y="235" width="16" height="16" class="dotfile" rx="2" />
+    <text x="22" y="248" class="text">Dotfile</text>
+  </g>
+</svg>

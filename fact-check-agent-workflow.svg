@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Styles -->
+  <defs>
+    <style>
+      .bg-rect { fill: #f8f9fa; stroke: #dee2e6; stroke-width: 2; }
+      .node { fill: #ffffff; stroke: #6c757d; stroke-width: 2; rx: 10; ry: 10; filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.1)); }
+      .node-active { fill: #e9f7f0; stroke: #28a745; stroke-width: 2.5; }
+      .node-text { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; text-anchor: middle; }
+      .node-desc { font-family: Arial, sans-serif; font-size: 11px; text-anchor: middle; }
+      .arrow { stroke: #6c757d; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .data-flow { stroke: #17a2b8; stroke-width: 2; stroke-dasharray: 5,3; fill: none; }
+      .header { font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; text-anchor: middle; }
+      .subheader { font-family: Arial, sans-serif; font-size: 14px; font-style: italic; text-anchor: middle; }
+      .model-badge { fill: #6f42c1; rx: 4; ry: 4; }
+      .model-text { font-family: Arial, sans-serif; font-size: 10px; fill: white; text-anchor: middle; }
+      .api-badge { fill: #fd7e14; rx: 4; ry: 4; }
+      .api-text { font-family: Arial, sans-serif; font-size: 10px; fill: white; text-anchor: middle; }
+      .db-badge { fill: #20c997; rx: 4; ry: 4; }
+      .db-text { font-family: Arial, sans-serif; font-size: 10px; fill: white; text-anchor: middle; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" class="bg-rect" />
+  
+  <!-- Title -->
+  <text x="400" y="40" class="header">PopNews Fact-Check Agent Workflow</text>
+  <text x="400" y="65" class="subheader">AI-Powered News Verification System</text>
+
+  <!-- Nodes -->
+  <!-- Input Processing Node -->
+  <rect x="150" y="110" width="160" height="80" class="node node-active" />
+  <text x="230" y="140" class="node-text">1. Input Processing</text>
+  <text x="230" y="160" class="node-desc">Summarize news claim</text>
+  <rect x="170" y="172" width="70" height="16" class="model-badge" />
+  <text x="205" y="183" class="model-text">LLama-3.3</text>
+
+  <!-- Search Node -->
+  <rect x="150" y="240" width="160" height="80" class="node" />
+  <text x="230" y="270" class="node-text">2. Search</text>
+  <text x="230" y="290" class="node-desc">Gather evidence</text>
+  <rect x="170" y="302" width="70" height="16" class="api-badge" />
+  <text x="205" y="313" class="api-text">Tavily API</text>
+
+  <!-- Vector DB Node -->
+  <rect x="150" y="370" width="160" height="80" class="node" />
+  <text x="230" y="400" class="node-text">3. Vector Processing</text>
+  <text x="230" y="420" class="node-desc">Chunk, embed, retrieve</text>
+  <rect x="170" y="432" width="70" height="16" class="db-badge" />
+  <text x="205" y="443" class="db-text">Qdrant DB</text>
+
+  <!-- Fact-Check Node -->
+  <rect x="490" y="240" width="160" height="80" class="node" />
+  <text x="570" y="270" class="node-text">4. Fact Checking</text>
+  <text x="570" y="290" class="node-desc">Analyze and verify</text>
+  <rect x="510" y="302" width="70" height="16" class="model-badge" />
+  <text x="545" y="313" class="model-text">LLama-3.3</text>
+
+  <!-- Result Node -->
+  <rect x="490" y="110" width="160" height="80" class="node" />
+  <text x="570" y="140" class="node-text">5. Final Report</text>
+  <text x="570" y="160" class="node-desc">Verdict and analysis</text>
+
+  <!-- Connections -->
+  <path d="M230 190 L230 240" class="arrow" />
+  <path d="M230 320 L230 370" class="arrow" />
+  <path d="M310 410 L490 280" class="arrow" />
+  <path d="M310 280 L490 280" class="data-flow" />
+  <path d="M570 240 L570 190" class="arrow" />
+
+  <!-- Data States -->
+  <g>
+    <rect x="320" y="115" width="110" height="20" rx="10" ry="10" fill="#e2e3e5" stroke="#6c757d" stroke-width="1" />
+    <text x="375" y="130" font-family="Arial, sans-serif" font-size="11px" text-anchor="middle">input_data</text>
+  </g>
+  <g>
+    <rect x="320" y="140" width="110" height="20" rx="10" ry="10" fill="#e2e3e5" stroke="#6c757d" stroke-width="1" />
+    <text x="375" y="155" font-family="Arial, sans-serif" font-size="11px" text-anchor="middle">summary</text>
+  </g>
+  <g>
+    <rect x="320" y="250" width="110" height="20" rx="10" ry="10" fill="#e2e3e5" stroke="#6c757d" stroke-width="1" />
+    <text x="375" y="265" font-family="Arial, sans-serif" font-size="11px" text-anchor="middle">search_results</text>
+  </g>
+  <g>
+    <rect x="350" y="320" width="110" height="20" rx="10" ry="10" fill="#e2e3e5" stroke="#6c757d" stroke-width="1" />
+    <text x="405" y="335" font-family="Arial, sans-serif" font-size="11px" text-anchor="middle">chunks</text>
+  </g>
+  <g>
+    <rect x="350" y="345" width="110" height="20" rx="10" ry="10" fill="#e2e3e5" stroke="#6c757d" stroke-width="1" />
+    <text x="405" y="360" font-family="Arial, sans-serif" font-size="11px" text-anchor="middle">embeddings</text>
+  </g>
+  <g>
+    <rect x="350" y="370" width="110" height="20" rx="10" ry="10" fill="#e2e3e5" stroke="#6c757d" stroke-width="1" />
+    <text x="405" y="385" font-family="Arial, sans-serif" font-size="11px" text-anchor="middle">relevant_chunks</text>
+  </g>
+  <g>
+    <rect x="390" y="200" width="110" height="20" rx="10" ry="10" fill="#e2e3e5" stroke="#6c757d" stroke-width="1" />
+    <text x="445" y="215" font-family="Arial, sans-serif" font-size="11px" text-anchor="middle">report</text>
+  </g>
+
+  <!-- Tools/Resources -->
+  <g>
+    <rect x="670" y="110" width="100" height="80" rx="10" ry="10" fill="#f8f9fa" stroke="#6c757d" stroke-width="1" />
+    <text x="720" y="130" font-family="Arial, sans-serif" font-size="12px" font-weight="bold" text-anchor="middle">Tools Used</text>
+    <line x1="680" y1="140" x2="760" y2="140" stroke="#6c757d" stroke-width="1" />
+    <text x="720" y="155" font-family="Arial, sans-serif" font-size="11px" text-anchor="middle">Groq LLM</text>
+    <text x="720" y="175" font-family="Arial, sans-serif" font-size="11px" text-anchor="middle">Tavily Search</text>
+    <text x="720" y="195" font-family="Arial, sans-serif" font-size="11px" text-anchor="middle">HF Embeddings</text>
+  </g>
+
+  <!-- State Graph Note -->
+  <g>
+    <rect x="670" y="210" width="100" height="60" rx="10" ry="10" fill="#d1ecf1" stroke="#0c5460" stroke-width="1" />
+    <text x="720" y="230" font-family="Arial, sans-serif" font-size="11px" font-weight="bold" text-anchor="middle">LangGraph</text>
+    <text x="720" y="250" font-family="Arial, sans-serif" font-size="10px" text-anchor="middle">StateGraph with</text>
+    <text x="720" y="265" font-family="Arial, sans-serif" font-size="10px" text-anchor="middle">directed workflow</text>
+  </g>
+</svg>

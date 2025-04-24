@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+   <!-- Styles -->
+   <defs>
+     <style>
+       .process-box { fill: #d0e8ff; stroke: #333; stroke-width: 2; rx: 10; ry: 10; }
+       .decision-box { fill: #ffe0d0; stroke: #333; stroke-width: 2; }
+       .start-end { fill: #d0ffe0; stroke: #333; stroke-width: 2; rx: 15; ry: 15; }
+       .data-box { fill: #f0d0ff; stroke: #333; stroke-width: 2; }
+       .title { font-family: Arial; font-size: 14px; font-weight: bold; text-anchor: middle; }
+       .text { font-family: Arial; font-size: 12px; text-anchor: middle; }
+       .arrow { stroke: #666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+       .dashed { stroke-dasharray: 5,5; }
+     </style>
+     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+       <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+     </marker>
+   </defs>
+   
+   <!-- Title -->
+   <text x="400" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">AI Agent Workflow</text>
+   
+   <!-- Start -->
+   <ellipse cx="150" cy="80" rx="70" ry="30" class="start-end" />
+   <text x="150" y="85" class="title">Start</text>
+   
+   <!-- Request Processing -->
+   <rect x="80" y="150" width="140" height="60" class="process-box" />
+   <text x="150" y="170" class="title">Request Intake</text>
+   <text x="150" y="190" class="text">Parse user request</text>
+   
+   <!-- Task Analysis -->
+   <rect x="80" y="250" width="140" height="60" class="process-box" />
+   <text x="150" y="270" class="title">Task Analysis</text>
+   <text x="150" y="290" class="text">Understand requirements</text>
+   
+   <!-- Decision -->
+   <polygon points="150,340 220,390 150,440 80,390" class="decision-box" />
+   <text x="150" y="395" class="title">Need more info?</text>
+   
+   <!-- Request more info -->
+   <rect x="280" y="360" width="140" height="60" class="process-box" />
+   <text x="350" y="380" class="title">Request Info</text>
+   <text x="350" y="400" class="text">Ask user for details</text>
+   
+   <!-- Plan creation -->
+   <rect x="80" y="480" width="140" height="60" class="process-box" />
+   <text x="150" y="500" class="title">Create Plan</text>
+   <text x="150" y="520" class="text">Define execution steps</text>
+   
+   <!-- External Knowledge -->
+   <path d="M280 150 L380 150 L380 210 L280 210 Z" class="data-box" />
+   <text x="330" y="170" class="title">Knowledge Base</text>
+   <text x="330" y="190" class="text">Reference data</text>
+   
+   <!-- LLM -->
+   <rect x="490" y="150" width="140" height="60" rx="30" ry="30" class="process-box" />
+   <text x="560" y="170" class="title">LLM Processing</text>
+   <text x="560" y="190" class="text">AI reasoning engine</text>
+   
+   <!-- Tool Selection -->
+   <rect x="490" y="250" width="140" height="60" class="process-box" />
+   <text x="560" y="270" class="title">Tool Selection</text>
+   <text x="560" y="290" class="text">Choose execution tools</text>
+   
+   <!-- Execution -->
+   <rect x="490" y="350" width="140" height="60" class="process-box" />
+   <text x="560" y="370" class="title">Task Execution</text>
+   <text x="560" y="390" class="text">Perform required work</text>
+   
+   <!-- Validation -->
+   <polygon points="560,440 630,490 560,540 490,490" class="decision-box" />
+   <text x="560" y="495" class="title">Valid result?</text>
+   
+   <!-- Response Generation -->
+   <rect x="280" y="460" width="140" height="60" class="process-box" />
+   <text x="350" y="480" class="title">Format Response</text>
+   <text x="350" y="500" class="text">Structure output</text>
+   
+   <!-- End -->
+   <ellipse cx="560" cy="580" rx="70" ry="30" class="start-end" />
+   <text x="560" y="585" class="title">End</text>
+   
+   <!-- Connections -->
+   <path d="M150 110 L150 150" class="arrow" />
+   <path d="M150 210 L150 250" class="arrow" />
+   <path d="M150 310 L150 340" class="arrow" />
+   <path d="M220 390 L280 390" class="arrow" />
+   <path d="M420 390 L420 250 L490 250" class="arrow" />
+   <path d="M150 440 L150 480" class="arrow" />
+   <path d="M220 500 L280 490" class="arrow" />
+   <path d="M420 490 L490 490" class="arrow" />
+   <path d="M560 310 L560 350" class="arrow" />
+   <path d="M560 410 L560 440" class="arrow" />
+   <path d="M560 540 L560 580" class="arrow" />
+   <path d="M490 490 L420 490" class="arrow dashed" />
+   
+   <!-- Knowledge connections -->
+   <path d="M220 180 L280 180" class="arrow" />
+   <path d="M380 180 L490 180" class="arrow" />
+   <path d="M560 210 L560 250" class="arrow" />
+   <path d="M330 210 L330 360 L280 360" class="arrow dashed" />
+ </svg>
